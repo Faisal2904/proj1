@@ -5,12 +5,12 @@ import { Component,EventEmitter, Output, ViewChild ,ContentChild, ElementRef} fr
   templateUrl: './cockpit.component.html',
   styleUrls: [ './cockpit.component.css' ]
 })
-export class CockpitComponent  {
+export class CockpitComponent implements ContentChild  {
   name = 'Angular';
   @Output('bpcreated') btnClick = new EventEmitter<{name:string, type:string}>();
 
   @ViewChild('localref2') inputData2 : ElementRef;
-  @ContentChild('contRef') paradata;
+  @ContentChild('contRef') paradata: ElementRef;
   constructor(){
 
   }
@@ -20,7 +20,7 @@ export class CockpitComponent  {
     console.log("in xyz" + localRef);
     this.btnClick.emit({name:'testfun', type:'eventclck'});
 
-    console.log("in xyz" + this.paradata.value);
+    console.log("in xyz" + this.paradata.nativeElement.value);
   }
 
 }
