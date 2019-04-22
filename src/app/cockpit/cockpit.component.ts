@@ -11,6 +11,7 @@ export class CockpitComponent implements ContentChild  {
 
   @ViewChild('localref2') inputData2 : ElementRef;
   @ContentChild('contRef') paradata: ElementRef;
+  
   constructor(){
 
   }
