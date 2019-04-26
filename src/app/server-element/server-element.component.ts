@@ -9,16 +9,16 @@ export class ServerElementComponent implements OnInit {
   name = 'Angular';
   @Input('srvElement') element:{type:string, name:string, staus: string};
 constructor(){
-   console.log("constructor called");
+   console.log("constructor called"+ this.element);
  } 
- ngOnChanges(changes:SimpleChanges){
- console.log("ngOnChange called");
- console.log(changes);
- }
+//  ngOnChanges(changes:SimpleChanges){
+//  console.log("ngOnChange called");
+//  console.log(changes);
+//  }
   
 
   ngOnInit(){
-   console.log("ngOnInit called");
+   console.log("ngOnInit called"+ this.element.name);
 }
 
 

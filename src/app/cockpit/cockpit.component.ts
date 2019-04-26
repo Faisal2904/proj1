@@ -16,12 +16,12 @@ export class CockpitComponent implements ContentChild  {
 
   }
   xyz(localRef:HTMLInputElement){
-     console.log("in xyz" + this.inputData2.nativeElement.value);
+     console.log("in xyz1" + this.inputData2.nativeElement.value);
 
-    console.log("in xyz" + localRef);
+    console.log("in xyz2" + localRef);
     this.btnClick.emit({name:'testfun', type:'eventclck'});
 
-    console.log("in xyz" + this.paradata.nativeElement.value);
+    console.log("in xyz3" + this.paradata.nativeElement.value);
   }
 
 }

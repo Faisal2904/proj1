@@ -14,6 +14,6 @@ export class AppComponent  {
   // console.log(this.serverElement);
  } 
  Onbtnpress(data:{name:string, type:string}){
-   console.log("listening event from other component   "  + data.name);
+   console.log("listening event from other component   "  + " " +data.name);
  }
 }
