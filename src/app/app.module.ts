@@ -6,9 +6,17 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
+import{Routes,RouterModule} from '@angular/router';
+
+const appRoutes:Routes=[
+  {path:'' , component:HelloComponent},
+  {path:'server' , component:ServerElementComponent},
+  {path:'cockpit' , component:CockpitComponent}
+  
+  ]
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes) ],
   declarations: [ AppComponent, HelloComponent,CockpitComponent, ServerElementComponent ],
   bootstrap:    [ AppComponent ]
 })

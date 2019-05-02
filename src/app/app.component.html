@@ -3,6 +3,33 @@
   Start editing to see some magic happen :)
 </p> -->
 
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recepie Book</a>
+    </div>
+    <div class="navbar-default">
+     <ul class="nav navbar-nav">
+       <li><a routerLink="/" >Home</a> </li>
+       <li><a routerLink="/cockpit" >cockpit</a> </li>
+         <li><a routerLink="server" >Server  </a> </li>
+     </ul>
+     
+     
+    </div>
+  </div>
+</nav>
+
+<div class="col-xs-12">
+  <router-outlet>
+
+  </router-outlet>
+</div>
+
+<!-- 
 <app-server-element [srvElement]="serverElement"></app-server-element>
 <app-cockpit (bpcreated)="Onbtnpress($event)"><p #contRef>hello i am from app html</p></app-cockpit>
+
+<hello></hello> -->
 
