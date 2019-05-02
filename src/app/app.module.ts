@@ -12,7 +12,8 @@ import{Routes,RouterModule} from '@angular/router';
 const appRoutes:Routes=[
   {path:'' , component:HelloComponent},
   {path:'server' , component:ServerElementComponent},
-  {path:'cockpit' , component:CockpitComponent}
+  {path:'cockpit' , component:CockpitComponent},
+  {path:'users/:id/:name', component:UsersComponent}
   
   ]
 
