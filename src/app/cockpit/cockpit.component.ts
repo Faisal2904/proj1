@@ -1,4 +1,5 @@
 import { Component,EventEmitter, Output, ViewChild ,ContentChild, ElementRef} from '@angular/core';
+import{Router} from '@angular/router'
 
 @Component({
   selector: 'app-cockpit',
@@ -12,16 +13,18 @@ export class CockpitComponent implements ContentChild  {
   @ViewChild('localref2') inputData2 : ElementRef;
   @ContentChild('contRef') paradata: ElementRef;
   
-  constructor(){
+  constructor(private router:Router){
 
   }
   xyz(localRef:HTMLInputElement){
-     console.log("in xyz1" + this.inputData2.nativeElement.value);
+      this.router.navigate(['/']);
+  //    console.log("in xyz1" + this.inputData2.nativeElement.value);
 
-    console.log("in xyz2" + localRef);
-    this.btnClick.emit({name:'testfun', type:'eventclck'});
+  //   console.log("in xyz2" + localRef);
+  //   this.btnClick.emit({name:'testfun', type:'eventclck'});
 
-    console.log("in xyz3" + this.paradata.nativeElement.value);
+  //   console.log("in xyz3" + this.paradata.nativeElement.value);
+  //  // this.router.navigate('/server');
   }
 
 }
