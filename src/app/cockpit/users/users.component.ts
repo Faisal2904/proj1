@@ -1,5 +1,5 @@
 import { Component,OnDestroy} from '@angular/core';
-import{Router,ActivatedRoute,Params} from '@angular/router'
+import{Router,ActivatedRoute,Params} from '@angular/router';
 import {Subscription}from 'rxjx/Subscription'
 
 @Component({
