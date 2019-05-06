@@ -18,7 +18,7 @@ constructor(){
   
 
   ngOnInit(){
-   console.log("ngOnInit called"+ this.element.name);
+   //console.log("ngOnInit called"+ this.element.name);
 }
 
 

@@ -7,19 +7,15 @@ import { HelloComponent } from './hello.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { UsersComponent } from './cockpit/users/users.component';
-import{Routes,RouterModule} from '@angular/router';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import{AppRoutesModule}from './app-routes.module'
 
-const appRoutes:Routes=[
-  {path:'' , component:HelloComponent},
-  {path:'server' , component:ServerElementComponent},
-  {path:'cockpit' , component:CockpitComponent},
-  {path:'users/:id/:name', component:UsersComponent}
-  
-  ]
+
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent, HelloComponent,CockpitComponent, ServerElementComponent,UsersComponent ],
+  imports:      [ BrowserModule, FormsModule,AppRoutesModule ],
+  declarations: [ AppComponent, HelloComponent,CockpitComponent, ServerElementComponent,UsersComponent,ErrorPageComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
